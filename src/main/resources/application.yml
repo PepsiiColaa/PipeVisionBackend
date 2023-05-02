@@ -1,0 +1,29 @@
+server:
+  port: 8888
+spring:
+  application:
+    # 应用的名称
+    name: Shopping
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/digitaltwin?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: 123
+  redis:
+    host: 192.168.0.120
+    port: 6379
+    database: 0
+  mvc:
+    favicon: enabled=true
+
+mybatis-plus:
+  configuration:
+    # 在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
+project:
+  path: D:\img
